@@ -14,39 +14,39 @@
   </head>
   <body>
     <div class="row">
+      <h1>Welcome {{name}}</h1>
       <div class="large-12 columns" ng-init="signin=true">
         <div ng-show="signin">
-        <h1>Sign in</h1>
-        <label>Username
-          <input type="text" ng-model="name">
-        </label>
-        <label>Password
-          <input type="text" ng-model="test">
-        </label>
-        <button class="button radius success" ng-click="signin=false">Sign up</button>
+          <h3>Sign in</h3>
+          <label>Username
+            <input type="text" placeholder="emellum" ng-model="name">
+          </label>
+          <label>Password
+            <input type="password" placeholder="scotchyscotch" ng-model="password">
+          </label>
+          <button class="button radius success" >Login (not implemented)</button>
+          <button class="button radius warning" ng-click="signin=false">Sign up</button>
         </div>
         <div ng-hide="signin">
-        <h1>Sign up</h1>
-        <label>Username
-          <input type="text" ng-model="name">
-        </label>
-        <label>Email
-          <input type="text" ng-model="test">
-        </label>
-        <label>Password
-          <input type="text" ng-model="test">
-        </label>
-        <label>Confirm Password
-          <input type="text" ng-model="name">
-        </label>
-
-        <button class="button radius success" ng-click="signin=true">Sign in</button>
-
+          <h3>Sign up</h3>
+          <label>Username
+            <input type="text" placeholder="emellum" ng-model="name">
+          </label>
+          <label>Email
+            <input type="email" placeholder="emellum@mail.csuchico.edu" ng-model="email">
+          </label>
+          <label>Password
+            <input type="password" placeholder="scotchyscotch" ng-model="password">
+          </label>
+          <label>Confirm Password
+            <input type="password" placeholder="scotchyscotch" ng-model="confirm">
+          </label>
+          <button class="button radius success">Create Account (not implemented)</button>
+          <button class="button radius warning" ng-click="signin=true">Sign in</button>
         </div>
       </div>
     </div>
     <div class="row">
     </div>
-
   </body>
 </html>
