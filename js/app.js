@@ -25,7 +25,7 @@ var app = angular.module('myApp', ['ui.router'])
       }
   }
   };
-});
+})
 .directive('ngEnter', function() {
     return function(scope, element, attrs) {
         element.bind("keydown keypress", function(event) {
