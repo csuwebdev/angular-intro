@@ -1,11 +1,14 @@
 
 <div class="row" ng-controller="listCtrl">
   <h1>Todo</h1>
-  <input type="text" placeholder="What do you have to do?" ng-model="text" ng-enter="addItem(text)">
+  Search: <input type="text" ng-model="search" placeholder="Search phrase">
+  Add Item: <input type="text" placeholder="What do you have to do?" ng-model="text" ng-enter="addItem(text)">
   <button class="button success tiny" ng-click="addItem(text)">Add Item</button>
   <ul>
-    <li ng-repeat="item in items">{{item}}
+    <li ng-repeat="item in items | filter:search | orderBy:'name'">{{item}}
       <button class="label tiny alert" confirmed-click="removeItem($index)" ng-confirm-click="Are you sure you want to delete the project?">Remove Item</button>
+      <br>
+      <br>
     </li>
   </ul>
 </div>

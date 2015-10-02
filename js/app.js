@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ui.router'])
 
 .controller('listCtrl', ['$scope', function($scope){
-  $scope.items=[];
+  $scope.items=['test', 'hello', 'viktor', '511'];
   $scope.addItem=function(item){
     $scope.items.push(item);
   }
